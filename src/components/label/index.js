@@ -45,6 +45,8 @@ export default class Label extends PureComponent {
 
     style: Animated.Text.propTypes.style,
     label: PropTypes.string,
+    labelColor: PropTypes.string,
+
   };
 
   render() {
@@ -59,6 +61,7 @@ export default class Label extends PureComponent {
       errorColor,
       baseColor,
       tintColor,
+      labelColor,
       style,
       focusAnimation,
       labelAnimation,
@@ -72,10 +75,10 @@ export default class Label extends PureComponent {
     let color = disabled?
       baseColor:
       restricted?
-        errorColor:
+      labelColor || errorColor:
         focusAnimation.interpolate({
           inputRange: [-1, 0, 1],
-          outputRange: [errorColor, baseColor, tintColor],
+          outputRange: [labelColor || errorColor, baseColor, labelColor || tintColor],
         });
 
     let textStyle = {
