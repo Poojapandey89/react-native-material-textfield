@@ -94,6 +94,7 @@ class Example extends Component {
  tintColor             | Text field accent color                     |   String | rgb(0, 145, 234)
  baseColor             | Text field base color                       |   String | rgba(0, 0, 0, .38)
  label                 | Text field label text                       |   String | -
+ labelColor             | Label text color                           |   String | -
  title                 | Text field helper text                      |   String | -
  prefix                | Text field prefix text                      |   String | -
  suffix                | Text field suffix text                      |   String | -

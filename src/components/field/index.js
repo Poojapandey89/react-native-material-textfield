@@ -648,6 +648,7 @@ export default class TextField extends PureComponent {
       activeLineWidth,
       disabledLineWidth,
       tintColor,
+      labelColor,
       baseColor,
       errorColor,
       containerStyle,
@@ -687,6 +688,7 @@ export default class TextField extends PureComponent {
       restricted,
       baseColor,
       tintColor,
+      labelColor,
       errorColor,
 
       contentInset,
