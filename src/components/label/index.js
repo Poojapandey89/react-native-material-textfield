@@ -49,6 +49,13 @@ export default class Label extends PureComponent {
 
   };
 
+  renderLabelAccessory = () => {
+    let { renderLabelRightAccessory } = this.props;
+    if(renderLabelRightAccessory && typeof renderLabelRightAccessory === 'function')
+    return renderLabelRightAccessory()
+    else return null
+  }
+
   render() {
     let {
       label,
@@ -117,6 +124,7 @@ export default class Label extends PureComponent {
         <Animated.Text style={[styles.text, style, textStyle]} {...props}>
           {label}
         </Animated.Text>
+        { this.renderLabelAccessory()}
       </Animated.View>
     );
   }

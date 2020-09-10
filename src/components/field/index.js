@@ -114,6 +114,7 @@ export default class TextField extends PureComponent {
 
     renderLeftAccessory: PropTypes.func,
     renderRightAccessory: PropTypes.func,
+    renderLabelRightAccessory: PropTypes.func,
 
     prefix: PropTypes.string,
     suffix: PropTypes.string,
@@ -502,7 +503,8 @@ export default class TextField extends PureComponent {
       labelFontSize,
       labelTextStyle,
       baseColor,
-      labelColor
+      labelColor,
+      renderLabelRightAccessory
     } = this.props;
 
     return (
@@ -514,6 +516,7 @@ export default class TextField extends PureComponent {
         label={label}
         style={labelTextStyle}
         baseColor={labelColor || baseColor}
+        renderLabelRightAccessory={renderLabelRightAccessory}
       />
     );
   }
