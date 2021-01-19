@@ -83,9 +83,10 @@ export default class Helper extends PureComponent {
     let textStyle = {
       opacity,
 
-      color: !disabled && errored?
-        errorColor:
-        baseColor,
+      color: errorColor
+      // !disabled && errored?
+      //   errorColor:
+      //   baseColor,
     };
 
     return (
