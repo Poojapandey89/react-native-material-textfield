@@ -565,9 +565,10 @@ export default class TextField extends PureComponent {
   }
 
   renderHelper() {
-    let { focusAnimation, error } = this.state;
+    let { focusAnimation } = this.state;
 
     let {
+      error,
       title,
       disabled,
       baseColor,
