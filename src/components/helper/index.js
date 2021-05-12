@@ -72,7 +72,7 @@ export default class Helper extends PureComponent {
       errorColor,
     } = this.props;
 
-    let text = errored?
+    let text = error?
       error:
       title;
 
