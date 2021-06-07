@@ -35,6 +35,9 @@ export default class Helper extends PureComponent {
       opacity,
     };
   }
+  componentDidUpdate(prevProps, prevState) {
+    this.setState({ errored: !! this.props.error})
+  }
 
   componentDidMount() {
     let { focusAnimation } = this.props;
